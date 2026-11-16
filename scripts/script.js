@@ -23,6 +23,7 @@ botao.addEventListener('click', () => {
 });
 
 // Scroll suave para links de navegação
+
 const navLinks = document.querySelectorAll('#menu ul a.link');
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
@@ -30,7 +31,7 @@ navLinks.forEach(link => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       const headerHeight = document.querySelector('header').offsetHeight;
-      const targetPosition = target.offsetTop - headerHeight - 20;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
       window.scrollTo({
         top: targetPosition,
         behavior: 'smooth'
