@@ -70,6 +70,8 @@ header {
 main {
   display: grid;
   grid-template-columns: auto 90vw auto;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 #ficha {
@@ -77,8 +79,6 @@ main {
   padding: 20px;
   border-radius: 8px;
   grid-column: 2;
-  gap: 20px;
-  margin: 20px 0px;
 }
 
 #ficha img.foto {
@@ -101,11 +101,22 @@ main {
   text-align: left;
 }
 
+.background-ficha {
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+}
+
 #social {
   display: flex;
   justify-content: center;
   font-size: 1.5em;
   gap: 5px;
+  margin-top: 10px;
+  background-color: var(--fundo-card);
+  width: 150px;
+  padding: 5px;
+  border-radius: 8px;
 }
 
 #social a {
@@ -189,15 +200,16 @@ article {
   flex-direction: column-reverse;
   gap: 15px;
 }
-#formacao-container .curso{
-background-color: var(--fundo-principal);
-padding: 5px 10px;
-border-radius: 8px;
-border-left: 5px solid var(--destaque-inverso);
-transition: border-width 0.3s, border-color 0.3s;
+
+#formacao-container .curso {
+  background-color: var(--fundo-principal);
+  padding: 5px 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-width 0.3s, border-color 0.3s;
 }
 
-#formacao-container .curso:hover{
+#formacao-container .curso:hover {
   border-left-width: 13px;
   cursor: pointer;
   border-color: var(--destaque);
@@ -223,13 +235,13 @@ transition: border-width 0.3s, border-color 0.3s;
   border-radius: 8px;
   border-left: 5px solid var(--destaque-inverso);
   transition: border-left 0.3s;
-  
+
 }
 
 #projetos-container .projeto:hover {
-border-left: solid var(--destaque);
-border-left-width: 10px;
-cursor: pointer;
+  border-left: solid var(--destaque);
+  border-left-width: 10px;
+  cursor: pointer;
 }
 
 #projetos-container .foto {
@@ -260,6 +272,23 @@ footer a:hover {
 }
 
 @media screen and (min-width: 768px) {
+
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  section#ficha {
+    grid-column: 2/3;
+    position: sticky;
+    height: fit-content;
+    top: 48px
+
+  }
+
+  section#detalhes {
+    grid-column: 3/4;
+  }
+
   #skill-container {
     grid-template-columns: 1fr 1fr;
   }
