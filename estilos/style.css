@@ -154,6 +154,17 @@ transition: transform 0.3s, box-shadow 0.5s, border 0.5s;
   grid-column: 2;
 }
 
+.link-projetos a{
+  text-decoration:none;
+  font-weight: bold;
+  color: var(--destaque);
+  transition: color 0.3s;
+}
+
+.link-projetos a:hover{
+color: var(--destaque-inverso);
+}
+
 article h2 {
   color: var(--destaque);
   margin-bottom: 10px;
