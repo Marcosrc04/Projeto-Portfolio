@@ -27,11 +27,22 @@ html {
   --fundo-card: #ffffff;
 }
 
+body.escuro {
+
+  --fundo-principal: #222222;
+  --texto: #e0e0e0;
+  --texto-inverso: #333333;
+  --destaque: #ff5522;
+  --destaque-inverso: #a73917;
+  --fundo-card: #444444;
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -94,6 +105,16 @@ main {
   margin-bottom: 15px;
 }
 
+#foto-perfil {
+transition: transform 0.3s, box-shadow 0.5s, border 0.5s;
+}
+
+#foto-perfil:hover {
+  transform: scale(1.020);
+  box-shadow: 0px 0px 15px var(--destaque);
+  border: solid 10px var(--destaque);
+}
+
 #ficha h1 {
   color: var(--destaque);
   margin: 15px 0;
@@ -121,11 +142,12 @@ main {
 
 #social a {
   color: var(--destaque);
-  transition: color 0.5s;
+  transition: color 0.5s, font-size 0.3s;
 }
 
 #social a:hover {
   color: var(--destaque-inverso);
+  font-size: 1.2em;
 }
 
 #detalhes {
